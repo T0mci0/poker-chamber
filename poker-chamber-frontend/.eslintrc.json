@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true,
+        "es2022": true,
+        "jasmine": true
+    },
+    "extends": [
+        "airbnb-typescript/base"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 13,
+        "project": "./tsconfig.eslint.json",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "import",
+        "prettier",
+        "@typescript-eslint"
+    ],
+    "rules": {
+
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".js", ".jsx", ".ts", ".tsx", ".json"]
+            }
+        }
+    }
+}
