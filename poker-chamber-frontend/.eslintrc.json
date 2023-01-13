@@ -19,7 +19,8 @@
         "@typescript-eslint"
     ],
     "rules": {
-
+        "comma-dangle": ["error", "never"],
+        "@typescript-eslint/comma-dangle": ["error", "never"]
     },
     "settings": {
         "import/resolver": {

@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "eslint \"src/app/**/*.ts\" && ng serve",
+    "build": "eslint \"src/app/**/*.ts\" && ng build",
+    "lint": "eslint \"src/app/**/*.ts\"",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
