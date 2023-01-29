@@ -1,0 +1,30 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <div class="toolbar-title">
+        <span>POKER CHAMBER</span>
+    </div>
+</mat-toolbar>
+<div class="content">
+    <mat-card class="clock-controls">
+        <div class="control-row">
+            <mat-icon>timelapse</mat-icon>
+            <span>{{ gameClock }}</span>
+        </div>
+        <div class="control-row">
+            <button mat-icon-button>
+                <mat-icon>history</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>pause_circle</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>play_circle</mat-icon>
+            </button>
+            <button mat-icon-button>
+                <mat-icon>more_time</mat-icon>
+            </button>
+        </div>
+    </mat-card>
+</div>
