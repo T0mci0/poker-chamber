@@ -1,30 +1,35 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-    </button>
-    <div class="toolbar-title">
-        <span>POKER CHAMBER</span>
+<mat-card class="clock-controls">
+    <h1>Sit 'n' Go</h1>
+    <div class="info-section">
+        <div class="info-row">
+            <mat-icon color="primary">timelapse</mat-icon>
+            <span class="clock">{{ gameClock }}</span>
+        </div>
+        <div class="info-row">
+            <mat-icon color="primary">fiber_smart_record</mat-icon>
+            <span class="clock">{{ blinds }}</span>
+        </div>
+        <div class="info-row">
+            <mat-icon color="primary">groups</mat-icon>
+            <span class="clock">{{ remainingPlayers }}</span>
+        </div>
+        <div class="info-row">
+            <mat-icon color="primary">move_up</mat-icon>
+            <span class="clock">{{ remainingTimeInLevel }}</span>
+        </div>
     </div>
-</mat-toolbar>
-<div class="content">
-    <mat-card class="clock-controls">
-        <div class="control-row">
-            <mat-icon>timelapse</mat-icon>
-            <span>{{ gameClock }}</span>
-        </div>
-        <div class="control-row">
-            <button mat-icon-button>
-                <mat-icon>history</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>pause_circle</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>play_circle</mat-icon>
-            </button>
-            <button mat-icon-button>
-                <mat-icon>more_time</mat-icon>
-            </button>
-        </div>
-    </mat-card>
-</div>
+    <div class="control-row">
+        <button mat-icon-button class="previous-level" [disabled]="this.blindLevel === 0" (click)="goToPreviousLevel()">
+            <mat-icon color="primary">next_plan</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="!gamePaused" (click)="pauseGame()">
+            <mat-icon color="primary">pause_circle</mat-icon>
+        </button>
+        <button mat-icon-button *ngIf="gamePaused" (click)="resumeGame()">
+            <mat-icon color="primary">play_circle</mat-icon>
+        </button>
+        <button mat-icon-button [disabled]="this.blindLevel === this.blindStructure.length - 1" (click)="goToNextLevel()">
+            <mat-icon color="primary">next_plan</mat-icon>
+        </button>
+    </div>
+</mat-card>

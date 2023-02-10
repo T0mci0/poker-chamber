@@ -1,7 +1,15 @@
+.clock {
+    align-self: center;
+    margin-left: 8px;
+    font-weight: 700;
+}
+
 .clock-controls{
+    display: flex;
+    align-items: center;
     margin: 24px;
     padding: 16px;
-    width: 400px;
+    width: 300px;
 }
 
 .content {
@@ -11,10 +19,24 @@
 
 .control-row {
     display: flex;
+    justify-content: center;
 }
 
-.toolbar-title{
+.info-row {
     display: flex;
     justify-content: center;
-    width: 100%;
+    gap: 4px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 140px;
+    gap: 8px;
+}
+
+.previous-level {
+    transform: scaleX(-1);
 }
